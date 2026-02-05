@@ -38,5 +38,34 @@ Add this line (example):
 ```html
 <p><strong>Deployed by:</strong> DMI Cohort 2 | Rahul Sharma | Group 4 | Week 1 | 16-01-2026</p>
 ```
+## Footer Implementation
+
+### Features
+- Version display (v1.0)
+- Dynamic deployment date
+- Author attribution
+
+### Date Generation
+The deployment date is dynamically generated using JavaScript:
+
+`` javascript
+// Format: DD Mon YYYY
+document.getElementById('deployDate').innerText = new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) ''
+
+### Files Modified
+
+    index.html - Added footer HTML with dynamic date span including javascript date formatting.
+
+
+## How It Works
+
+    Footer contains <span id="deploy-date"> placeholder
+
+    Inside the <span> is the JavaScript script which runs when page loads
+
+    Formats current date as "DD Mon YYYY"
+
+    Updates the span element with current date
+
 
 ✅ This proof must be visible in your browser screenshot submission.
